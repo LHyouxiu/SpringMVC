@@ -8,6 +8,8 @@ import org.springframework.web.servlet.mvc.Controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+//定义控制器
+//注意点：不要导错包，实现Controller接口，重写方法；
 public class ControllerTest01 implements Controller{
 
     @Override
