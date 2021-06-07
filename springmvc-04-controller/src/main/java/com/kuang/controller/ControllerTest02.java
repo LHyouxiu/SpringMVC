@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 //@Controller注解的类会自动添加到Spring上下文中
 @Controller
+@RequestMapping("/admin")
 public class ControllerTest02 {
 
     //映射访问路径
@@ -18,4 +19,6 @@ public class ControllerTest02 {
         return "test";
 
     }
+
+
 }
