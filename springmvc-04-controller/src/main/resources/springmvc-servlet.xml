@@ -10,7 +10,7 @@
        http://www.springframework.org/schema/mvc
        https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <bean name="/t1" class="com.kuang.controller.ControllerTest01"/>
+    <bean name="/t1" class="com.kuang.controller.controller.ControllerTest01"/>
 
     <!--    视图解析器   ModelAndView方式需要视图解析器  ServletAPI 不需要视图解析器
         SpringMVC不需要视图解析器 也可需要视图解析器 转发时可需要，重定向本来就是重新请求一个新地址 -->
@@ -26,6 +26,6 @@
 
 
     <!-- 自动扫描指定的包，下面所有注解类交给IOC容器管理  @Controller注解使用-->
-    <context:component-scan base-package="com.kuang.controller"/>
+    <context:component-scan base-package="com.kuang.controller.controller"/>
 
 </beans>

@@ -19,6 +19,6 @@
 
 
     <!--Handler-->
-    <bean id="/hello" class="com.kuang.controller.HelloController"/>
+    <bean id="/hello" class="com.kuang.controller.controller.HelloController"/>
 
 </beans>

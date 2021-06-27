@@ -3,7 +3,7 @@
 <head>
    <title>$Title$</title>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<%--   <script src="${pageContext.request.contextPath}/statics/js/jquery-3.1.1.min.js"></script>--%>
+   <script src="${pageContext.request.contextPath}/statics/js/jquery-3.1.1.min.js"></script>
    <script>
   function a1(){
     $.post({
