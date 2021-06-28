@@ -1,5 +1,7 @@
 package com.kuang.controller;
 
+import org.springframework.http.HttpRequest;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -58,12 +60,12 @@ public class FileController {
     @RequestMapping("/upload2")
     public String fileUpload2(@RequestParam("file") CommonsMultipartFile file, HttpServletRequest request) throws IOException {
 
-    //上传路径保存设置
-    String path = request.getServletContext().getRealPath("/upload");
-    File realPath = new File(path);
-    if (!realPath.exists()){
-        realPath.mkdir();
-      }
+        //上传路径保存设置
+        String path = request.getServletContext().getRealPath("/upload");
+        File realPath = new File(path);
+        if (!realPath.exists()){
+            realPath.mkdir();
+        }
         //上传文件地址
         System.out.println("上传文件保存地址："+realPath);
 
@@ -74,11 +76,11 @@ public class FileController {
     }
 
     /*
-    * 下载
-    *
-    * */
+     * 下载
+     *
+     * */
     @RequestMapping("/download")
-    public String downloads(HttpServletResponse response,HttpServletRequest request) throws IOException {
+    public String downloads(HttpServletResponse response, HttpServletRequest request) throws IOException {
         System.out.println("下载图片");
         //要下载的图片地址
         String realPath = request.getServletContext().getRealPath("/upload");
@@ -110,7 +112,4 @@ public class FileController {
         return "ok";
 
     }
-
-
-
 }
